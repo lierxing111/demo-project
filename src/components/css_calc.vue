@@ -24,7 +24,9 @@
     </p>
     <p>5.表达式中有“*”和“/”时，其前后可以没有空格，但建议留有空格</p> -->
     <ul class="my-list">
-      <li class="li" v-for="(item, index) in list" :key="index">{{ item.label }}</li>
+      <li class="li" v-for="(item, index) in list" :key="index">
+        {{ item.label }}
+      </li>
     </ul>
   </div>
 </template>
@@ -35,21 +37,21 @@ export default {
   name: "CSS_Calc",
   data() {
     return {
-      list:[
+      list: [
         {
-          label:'one',
-          value:'1'
+          label: "one",
+          value: "1",
         },
         {
-          label:'two',
-          value:'2'
+          label: "two",
+          value: "2",
         },
         {
-          label:'three',
-          value:'3'
+          label: "three",
+          value: "3",
         },
-      ]
-    }
+      ],
+    };
   },
   methods: {},
 };
@@ -62,20 +64,20 @@ export default {
 }
 .wraper {
   background-color: #fff;
-  .my-list{
+  .my-list {
     list-style: none;
-     display: flex;
-     flex-direction: row;
-     margin: 20px;
-     background-color: yellow;
-    .li{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    background-color: yellow;
+    .li {
       padding: 10px;
       margin: 10px;
-      background: #FF6666;
-      border: 5px solid #DAC8A7;
+      background: #ff6666;
+      border: 5px solid #dac8a7;
       list-style-type: none;
       text-align: center;
-      width: calc(100%/3 - (10px + 10px + 5px) * 2);
+      width: calc(100% / 3 - (10px + 10px + 5px) * 2);
     }
   }
 }
