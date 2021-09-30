@@ -61,11 +61,6 @@ body {
       }
     }
     .footer {
-    //   border: 2px;
-    //   padding: 5px;
-    //   margin: 0 20px;
-    //   width: calc(100% - (2px + 5px + 20px) * 2);
-
       width: calc(100% - (8px + 20px) * 2);
       margin: auto;
       height: 50px;
