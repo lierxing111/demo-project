@@ -1,0 +1,55 @@
+/* el-radio被激活时的样式 */
+.el-radio.is-bordered.is-checked {
+    border-color: #409eff;
+    &.success{
+      border-color: #67c23a;
+      .el-radio__input.is-checked + .el-radio__label {
+        color: #67c23a !important;
+      }
+      .el-radio__input.is-checked .el-radio__inner {
+        background: #67c23a !important;
+        border-color: #67c23a !important;
+      }
+    }
+    &.primary{
+      border-color: #409eff;
+      .el-radio__input.is-checked + .el-radio__label {
+        color: #409eff !important;
+      }
+      .el-radio__input.is-checked .el-radio__inner {
+        background: #409eff !important;
+        border-color: #409eff !important;
+      }
+    }
+    &.warning{
+      border-color: #e6a23c;
+      .el-radio__input.is-checked + .el-radio__label {
+        color: #e6a23c !important;
+      }
+      .el-radio__input.is-checked .el-radio__inner {
+        background: #e6a23c !important;
+        border-color: #e6a23c !important;
+      }
+    }
+    &.danger{
+      border-color: #f56c6c;
+      .el-radio__input.is-checked + .el-radio__label {
+        color: #f56c6c !important;
+      }
+      .el-radio__input.is-checked .el-radio__inner {
+        background: #f56c6c !important;
+        border-color: #f56c6c !important;
+      }
+    }
+    &.info{
+      border-color: #d3d4d6;
+      .el-radio__input.is-checked + .el-radio__label {
+        color: #909399 !important;
+      }
+      .el-radio__input.is-checked .el-radio__inner {
+        background: #909399 !important;
+        border-color: #909399 !important;
+      }
+    }
+  
+  }

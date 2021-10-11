@@ -10,7 +10,8 @@
 // import HelloWorld from "@/components/HelloWorld.vue";
 // import HelloWorld from "@/components/js_includes_function.vue";
 // import HelloWorld from "@/components/css_calc.vue";
-import HelloWorld from "@/components/css_calc_layout.vue";
+// import HelloWorld from "@/components/css_calc_layout.vue";
+import HelloWorld from "@/components/lighting_different_clolor_button.vue";
 
 export default {
   name: "Home",
