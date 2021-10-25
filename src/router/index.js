@@ -5,13 +5,14 @@ import { createRouter, createWebHashHistory } from "vue-router";
 // import Home from "@/components/js_includes_function.vue";
 // import Home from "@/components/css_calc.vue";
 // import Home from "@/components/css_calc_layout.vue";
-import Form from "@/views/Form";
+// import Form from "@/views/Form";
+import Table from "@/views/table";
 
 const routes = [
   {
     path: "/",
-    name: "Form",
-    component: Form,
+    name: "Table",
+    component: Table,
   },
 ];
 
