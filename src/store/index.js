@@ -1,5 +1,5 @@
 import { createStore } from "vuex";
-import createPersistedState from "vuex-persistedstate";
+import createPersistedState from "vuex-persistedstate"; // 参考地址:  https://segmentfault.com/a/1190000022393039
 
 export default createStore({
   state: {
