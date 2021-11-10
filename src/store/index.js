@@ -3,7 +3,7 @@ import createPersistedState from "vuex-persistedstate"; // 参考地址:  https:
 
 export default createStore({
   state: {
-    count: 100,
+    count: 0, // 代码推不上去，切换成手机热点的网络就可以。
   },
   mutations: {
     increment: (state) => {
