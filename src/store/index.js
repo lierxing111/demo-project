@@ -3,7 +3,7 @@ import createPersistedState from "vuex-persistedstate"; // 参考地址:  https:
 
 export default createStore({
   state: {
-    count: 10,
+    count: 100,
   },
   mutations: {
     increment: (state) => {
