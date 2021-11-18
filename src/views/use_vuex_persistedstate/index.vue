@@ -19,10 +19,10 @@ export default {
   },
   methods: {
     increment() {
-      this.$store.commit("increment");
+      this.$store.commit("count/increment");
     },
     decrement() {
-      this.$store.commit("decrement");
+      this.$store.commit("count/decrement");
     },
   },
 };
