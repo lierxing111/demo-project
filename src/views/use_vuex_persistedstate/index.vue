@@ -1,5 +1,6 @@
 <template>
   <div class="use-vuex-persistedstate">
+    <h1>vuex 状态持久化</h1>
     <p>{{ count }}</p>
     <p>
       <button @click="increment">+</button>
