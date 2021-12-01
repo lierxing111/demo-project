@@ -1,6 +1,5 @@
 <template>
   <div class="use-vuex-persistedstate">
-    <!-- 删除不用的代码 -->
     <p>{{ count }}</p>
     <p>
       <button @click="increment">+</button>
