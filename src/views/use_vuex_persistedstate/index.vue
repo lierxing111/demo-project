@@ -1,7 +1,7 @@
 <template>
   <div class="use-vuex-persistedstate">
     <!-- <h1>vuex 状态持久化</h1> -->
-    <div><a href="https://github.com/robinvdvleuten/vuex-persistedstate">GitHub</a></div>
+    <!-- <div><a href="https://github.com/robinvdvleuten/vuex-persistedstate">GitHub</a></div> -->
     <p>{{ count }}</p>
     <p>
       <button @click="increment">+</button>
