@@ -8,13 +8,14 @@ import { createRouter, createWebHashHistory } from "vue-router";
 // import Form from "@/views/Form";
 // import Table from "@/views/table";
 // import UseVuexPersistedstate from "@/views/use_vuex_persistedstate";
-import FlexLayout from "@/views/flex-layout";
+// import FlexLayout from "@/views/flex-layout";
+import DiceFlexLayout from "@/views/dice_flexLayout"; // 骰子的布局
 
 const routes = [
   {
     path: "/",
-    name: "FlexLayout",
-    component: FlexLayout,
+    name: "DiceFlexLayout",
+    component: DiceFlexLayout,
   },
 ];
 
