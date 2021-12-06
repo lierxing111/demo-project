@@ -1,6 +1,5 @@
 <template>
   <div class="dice-flex-layout-wraper">
-    <!-- <div>dice-flex-layout-wraper</div> -->
     <h6>first-face</h6>
     <div class="first-face">
       <span class="pip"></span>
