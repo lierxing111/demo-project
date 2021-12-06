@@ -7,13 +7,14 @@ import { createRouter, createWebHashHistory } from "vue-router";
 // import Home from "@/components/css_calc_layout.vue";
 // import Form from "@/views/Form";
 // import Table from "@/views/table";
-import UseVuexPersistedstate from "@/views/use_vuex_persistedstate";
+// import UseVuexPersistedstate from "@/views/use_vuex_persistedstate";
+import FlexLayout from "@/views/flex-layout";
 
 const routes = [
   {
     path: "/",
-    name: "UseVuexPersistedstate",
-    component: UseVuexPersistedstate,
+    name: "FlexLayout",
+    component: FlexLayout,
   },
 ];
 
