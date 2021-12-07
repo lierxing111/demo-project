@@ -1,10 +1,5 @@
 <template>
   <div class="dice-flex-layout-wraper">
-<<<<<<< HEAD
-    <!-- <div>dice-flex-layout-wraper</div> -->
-=======
-    <h6>first-face</h6>
->>>>>>> 268a81641a5d2fdeb9ba5f522f0691bbd30e6bcf
     <div class="first-face">
       <span class="pip"></span>
     </div>
