@@ -1,4 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
+import Login from "@/views/login.vue";
 // @ is an alias to /src
 // import Home from "@/views/lighting_different_clolor_button";
 // import Home from "@/components/HelloWorld.vue";
@@ -9,13 +10,20 @@ import { createRouter, createWebHashHistory } from "vue-router";
 // import Table from "@/views/table";
 // import UseVuexPersistedstate from "@/views/use_vuex_persistedstate";
 // import FlexLayout from "@/views/flex-layout";
-import DiceFlexLayout from "@/views/dice_flexLayout"; // 骰子的布局
+// import DiceFlexLayout from "@/views/dice_flexLayout"; // 骰子的布局
+import UseingAxios from "@/views/useing_axios";
 
 const routes = [
+  //写demo的配置的路由
   {
     path: "/",
-    name: "DiceFlexLayout",
-    component: DiceFlexLayout,
+    name: "UseingAxios",
+    component: UseingAxios,
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
   },
 ];
 

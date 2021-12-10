@@ -1,4 +1,6 @@
 const state = () => ({
+  // token
+  token: "",
   username: "游客",
 });
 
@@ -9,6 +11,10 @@ const getters = {
 };
 
 const mutations = {
+  //设置token
+  SET_TOKEN: (state, token) => {
+    state.token = token;
+  },
   setUsername(state, username) {
     state.username = username;
   },
