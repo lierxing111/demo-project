@@ -13,14 +13,25 @@
         type="primary"
         :loading="btn.postMethLoading"
         @click="handlePost"
-        >POST请求</el-button
+        >POST请求
+      </el-button>
+      <el-button
+        type="primary"
+        :loading="btn.getMethLoading"
+        @click="handleDownload"
+        >下载</el-button
       >
     </el-row>
   </div>
 </template>
 
 <script>
-import { requestJobList, requestTestDevJob } from "@/api/jobTask";
+import {
+  requestJobList,
+  requestTestDevJob,
+  downloadPsFile,
+} from "@/api/jobTask";
+import { parseTime, downloadFile } from "@/utils";
 import { uuid } from "@/utils/index";
 export default {
   name: "UsesingAxios",
@@ -45,8 +56,26 @@ export default {
       },
     };
   },
-  mounted() {},
+  mounted() {
+    console.log(parseTime(new Date().getTime()));
+  },
   methods: {
+    async downloadFile() {
+      const params = {
+        fileContent:
+          "/home/etluser/app/azkabanagent/datax_task_agent.sh /home/etluser/task/datax/etl0/ dx_e0_gaia_push_annual_allow_rule -param:EXECUTION_ID=0 -param:CURRENT_FLOW_START_DT=2020-01-01-00:10:05 -param:CURRENT_FLOW_START_DAY=2020-01-01 -param:END_DATEKEY=2020-01-01 -param:LAST_EXTRACT_DT=1970-01-01-21:15:05 -param:LAST_EXTRACT_DAY=1970-01-02 -param:START_DATEKEY=1970-01-02 \n",
+        name: "admin",
+      };
+      const res = await downloadPsFile(params);
+      if (res) {
+        console.log(res);
+        downloadFile(res, "xxx", "txt");
+      }
+    },
+    handleDownload() {
+      console.log("下载");
+      this.downloadFile();
+    },
     handleGet() {
       // get请求方式
       this.getJobList();
