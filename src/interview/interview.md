@@ -138,13 +138,41 @@ let removeDumplicate = (arr) => {
     for (var i = 0; i < arr.length; i++) {
         for (var j = 0; j < resArr.length; j++) {
             if (arr[i] === resArr[j]) {
-                break
+                break //跳出内层for循环,j就不会再j++
             }
         }
         if (j === resArr.length) {
             resArr.push(arr[i])
         }
     }
+    return resArr
+}
+removeDumplicate(arr)
+```
+
+**利用`indexOf`优化数组去重：**
+```
+let arr = [1,1,2,3,4,5,6,6,6,6]
+let removeDumplicate = (arr) => {
+    let resArr = []
+    for (let i = 0; i < arr.length; i++) {
+        if (resArr.indexOf(arr[i])=== -1) {
+            resArr.push(arr[i])
+        }
+    }
+    console.log("resArr :", resArr);
+    return resArr
+}
+removeDumplicate(arr)
+```
+**利用`filter`方法优化数组去重：**
+```
+let arr = [1,1,2,3,4,5,6,6,6,6]
+let removeDumplicate = (arr) =>  {
+    let resArr = arr.filter((item, i)=> {
+        return arr.indexOf(arr[i]) === i
+    })
+    console.log("resArr :", resArr);
     return resArr
 }
 removeDumplicate(arr)
