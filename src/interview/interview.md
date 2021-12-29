@@ -129,3 +129,23 @@ let  removeDuplicate = (arr) => {
 }
 removeDuplicate(arr)
 ```
+
+```
+let arr = [1,1,2,3,4,5,6,6]
+
+let removeDumplicate = (arr) => {
+    let resArr = []
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < resArr.length; j++) {
+            if (arr[i] === resArr[j]) {
+                break
+            }
+        }
+        if (j === resArr.length) {
+            resArr.push(arr[i])
+        }
+    }
+    return resArr
+}
+removeDumplicate(arr)
+```
