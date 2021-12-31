@@ -183,5 +183,5 @@ removeDumplicate(arr)
 let arr = [1,1,2,3,4,5,6,6,6,6]
 let removeDumplicate = (arr) => Array.from(new Set(arr)) // [...new Set(arr)]
 let resArr = removeDumplicate(arr)
-console.log("resArr :", resArr)
+//console.log("resArr :", resArr)
 ```
