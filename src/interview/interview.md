@@ -177,3 +177,11 @@ let removeDumplicate = (arr) =>  {
 }
 removeDumplicate(arr)
 ```
+
+**利用ES6的`new Set()`去重**
+```
+let arr = [1,1,2,3,4,5,6,6,6,6]
+let removeDumplicate = (arr) => Array.from(new Set(arr)) // [...new Set(arr)]
+let resArr = removeDumplicate(arr)
+console.log("resArr :", resArr)
+```
