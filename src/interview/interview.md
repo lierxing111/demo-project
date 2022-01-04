@@ -185,3 +185,51 @@ let removeDumplicate = (arr) => Array.from(new Set(arr)) // [...new Set(arr)]
 let resArr = removeDumplicate(arr)
 //console.log("resArr :", resArr)
 ```
+
+**Promise:有8张图片的url,你需要并发去获取它,并且任何时刻同事请求的数量不超过3个。也就是说第4张图片一定石凳那一批有过一个请求完毕了才能开始，以此类推。**
+
+```
+ let urls = [
+    'https://img2.baidu.com/it/u=178538010,1805017681&fm=26&fmt=auto',
+    'https://img2.baidu.com/it/u=1753596758,2455477361&fm=26&fmt=auto',
+    'https://img2.baidu.com/it/u=3043376596,1361153113&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500',
+    'https://img0.baidu.com/it/u=1787431006,1100382779&fm=26&fmt=auto',
+    'https://img1.baidu.com/it/u=1398947489,2228630455&fm=15&fmt=auto',
+    'https://img2.baidu.com/it/u=2431174946,3929556935&fm=26&fmt=auto',
+    'https://img0.baidu.com/it/u=3195469868,3393354177&fm=26&fmt=auto',
+    'https://img0.baidu.com/it/u=2237303401,3617605199&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281'
+]
+let loadImg = (url) => {
+    return new Promise((resolve, reject) => {
+        const img = new Image()
+        img.onload = () => {
+            console.log('一张图片加载完成', url);
+            resolve()
+        }
+        img.onerror = reject
+        img.src = url
+    })
+}
+let limitLoad = (urls, limit) => {
+    let index = (limit - 1) // 从第三张图片开始加载
+    console.log('index :', index);
+    let executePromise = () => {
+        index += 1
+        if (index < urls.length) {
+            return loadImg(urls[index]).then(() => {
+                executePromise()
+            })
+        }
+    }
+    const promise = Promise.resolve()
+    promise.then(() =>{
+        for (let i = 1; i < limit; i++) {
+            console.log('i :', i);
+            loadImg(urls[i]).then(()=>{
+                return executePromise()
+            })
+        }
+    })
+}
+limitLoad(urls, 2)
+```
