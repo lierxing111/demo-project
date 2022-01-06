@@ -424,6 +424,11 @@ display为inline-block/table-cell/table-caption
 
 **margin塌陷**
 ```
+html:
+<div class="father">
+    <div class="son"></div>
+</div>
+
 css:
 
 div.father{
@@ -447,6 +452,13 @@ div.father div.son{
 **margin合并**
 
 ```
+html:
+
+<div class="one"></div>
+<div class="wrap">
+    <div class="two"></div>
+</div>
+
 css: 
 
 .one {
