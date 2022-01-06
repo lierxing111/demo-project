@@ -405,6 +405,65 @@ h1,p{
     clear: both;
 }
 ```
+**[margin塌陷和margin合并](https://juejin.cn/post/6976272394247897101)**
 
+**什么是BFC和作用**
+```
+Block Formatting Context，中文叫块级格式上下文。
+CSS将HTML的每一个元素都当成一个盒子，而且它进一步的认为每一个盒子里面都有一套正常的语法规则或者叫渲染规则，它能根据这个规则将写的HTML元素绘制出来，但是我们可以通过一些特定的手段触发BFC，让其所符合的语法规则和原来的语法规则有点不一样。
+也就是触发BFC之后，特定的盒子会遵循另一套语法规则。
+BFC听起来挺神奇，能改变一个盒子的语法规则，那到底改变了多少呢，其实也没改变多少。可能千分之一都不到。也就是它只改变了一点点。但是就是这一点点它把解决了margin塌陷和margin合并的问题
+```
+**如何出发BFC**
+```
+float属性为left/right
+overflow为hidden/scroll/auto
+position为absolute/fixed
+display为inline-block/table-cell/table-caption
+```
+
+**margin塌陷**
+```
+css:
+
+div.father{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(219, 68, 101);
+    margin-left: 100px;
+    margin-top: 100px;
+    overflow: hidden;/* 触发bfc */  
+}
+div.father div.son{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(56, 248, 207);
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+```
+
+**margin合并**
+
+```
+css: 
+
+.one {
+    background-color: pink;
+    height: 20px;
+    margin-bottom: 100px;
+}
+.wrap{
+    /* 触发bfc */
+    overflow: hidden;
+}
+.wrap .two {
+    background-color: purple;
+    height: 20px;
+    margin-top: 100px;
+}
+
+```
 
 
