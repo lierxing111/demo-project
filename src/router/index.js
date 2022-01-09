@@ -12,6 +12,7 @@ import Login from "@/views/login.vue";
 // import FlexLayout from "@/views/flex-layout";
 // import DiceFlexLayout from "@/views/dice_flexLayout"; // 骰子的布局
 import UseingAxios from "@/views/useing_axios";
+// import PraticeMobiuleWebAppLayout from ''
 
 const routes = [
   //写demo的配置的路由
