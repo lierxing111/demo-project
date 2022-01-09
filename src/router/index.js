@@ -11,15 +11,15 @@ import Login from "@/views/login.vue";
 // import UseVuexPersistedstate from "@/views/use_vuex_persistedstate";
 // import FlexLayout from "@/views/flex-layout";
 // import DiceFlexLayout from "@/views/dice_flexLayout"; // 骰子的布局
-import UseingAxios from "@/views/useing_axios";
-// import PraticeMobiuleWebAppLayout from ''
+// import UseingAxios from "@/views/useing_axios";
+import PraticeMobiuleWebAppLayout from "@/views/practice_mobile_web_app_page_layout";
 
 const routes = [
   //写demo的配置的路由
   {
     path: "/",
-    name: "UseingAxios",
-    component: UseingAxios,
+    name: "PraticeMobiuleWebAppLayout",
+    component: PraticeMobiuleWebAppLayout,
   },
   {
     path: "/login",
