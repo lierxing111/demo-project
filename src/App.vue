@@ -1,4 +1,6 @@
 <template>
+  <mobile-header />
+  <mobile-tab />
   <router-view />
 </template>
 

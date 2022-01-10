@@ -13,6 +13,7 @@ import Login from "@/views/login.vue";
 // import DiceFlexLayout from "@/views/dice_flexLayout"; // 骰子的布局
 // import UseingAxios from "@/views/useing_axios";
 import PraticeMobiuleWebAppLayout from "@/views/practice_mobile_web_app_page_layout";
+import UserCenter from "@/views/mobile-user-center";
 
 const routes = [
   //写demo的配置的路由
@@ -25,6 +26,11 @@ const routes = [
     path: "/login",
     name: "Login",
     component: Login,
+  },
+  {
+    path: "/user",
+    name: "User",
+    component: UserCenter,
   },
 ];
 

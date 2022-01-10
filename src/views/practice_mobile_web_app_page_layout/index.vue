@@ -13,4 +13,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped lang="scss">
+.practice-mobile-web-app-page-layout {
+  background-color: #fff;
+}
+</style>
