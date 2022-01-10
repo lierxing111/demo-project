@@ -6,9 +6,6 @@
       <router-link tag="div" class="mine" to="/user">
         <i class="icon-mine"></i>
       </router-link>
-      <!-- <div class="mine" @click="handleJumpToUser">
-        <i class="icon-mine"></i>
-      </div> -->
     </div>
   </div>
 </template>
