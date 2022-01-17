@@ -11,14 +11,15 @@ import Login from "@/views/login.vue";
 // import UseVuexPersistedstate from "@/views/use_vuex_persistedstate";
 // import FlexLayout from "@/views/flex-layout";
 // import DiceFlexLayout from "@/views/dice_flexLayout"; // 骰子的布局
-import UseingAxios from "@/views/useing_axios";
+// import UseingAxios from "@/views/useing_axios";
+import PercentHeightInherit from '@/views/percent_height_is_inherit'
 
 const routes = [
   //写demo的配置的路由
   {
     path: "/",
-    name: "UseingAxios",
-    component: UseingAxios,
+    name: "PercentHeightInherit",
+    component: PercentHeightInherit,
   },
   {
     path: "/login",
