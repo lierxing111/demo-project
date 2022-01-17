@@ -3,6 +3,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import ElementUI from "element-plus";
+import lazyPlugin from "vue3-lazy";
 
 import "element-plus/theme-chalk/index.css"; // 全局引入element-plus样式
 import "@/styles/index.scss"; // global css
@@ -17,6 +18,9 @@ const ComponentContext = require.context(
 );
 console.log("ComponentContext.keys()------", ComponentContext.keys());
 const app = createApp(App);
+// lazyPlugin.install(app, {
+//   loading: require("@/assets/default.png"),
+// });
 ComponentContext.keys().forEach((componentFilePath) => {
   const componentName = upperFirst(
     camelCase(
@@ -27,17 +31,15 @@ ComponentContext.keys().forEach((componentFilePath) => {
         .replace(/\.\w+$/, "")
     )
   );
-  console.log("componentName-----", componentName);
-  console.log("componentFilePath-----", componentFilePath);
-  // console.log(
-  //   "componentConfig.default componentConfig ",
-  //   componentConfig.default,
-  //   componentConfig
-  //   );
   app.component(
     componentName,
     defineAsyncComponent(() => ComponentContext(componentFilePath))
   );
 });
 
-app.use(store).use(router).use(ElementUI).mount("#app");
+app
+  .use(lazyPlugin, { loading: require("@/assets/default.png") })
+  .use(store)
+  .use(router)
+  .use(ElementUI)
+  .mount("#app");

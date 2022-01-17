@@ -20,6 +20,10 @@ import Rank from "@/views/mobile_rank";
 import Search from "@/views/mobile_search";
 
 const routes = [
+  {
+    path: "/",
+    redirect: "/recommend",
+  },
   //写demo的配置的路由
   {
     path: "/",

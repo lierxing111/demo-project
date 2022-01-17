@@ -37,14 +37,20 @@ export default {
     .tab-item {
       text-align: center;
       flex: 1;
+      text-decoration: none;
       .tab-link {
         color: $color-text-l;
         padding-bottom: 5px;
-        &.router-link-active {
-          .tab-link {
-            color: $color-theme;
-            border-bottom: 2px solid $color-theme;
-          }
+        // &.router-link-active {
+        //   .tab-link {
+        //     color: $color-theme;
+        //   }
+        // }
+      }
+      &.router-link-active {
+        .tab-link {
+          color: $color-theme;
+          border-bottom: 2px solid $color-theme;
         }
       }
     }
