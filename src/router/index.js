@@ -12,14 +12,15 @@ import Login from "@/views/login.vue";
 // import FlexLayout from "@/views/flex-layout";
 // import DiceFlexLayout from "@/views/dice_flexLayout"; // 骰子的布局
 // import UseingAxios from "@/views/useing_axios";
-import PercentHeightInherit from '@/views/percent_height_is_inherit'
+// import PercentHeightInherit from "@/views/percent_height_is_inherit";
+import PositionFixed from "@/views/position_fixed";
 
 const routes = [
   //写demo的配置的路由
   {
     path: "/",
-    name: "PercentHeightInherit",
-    component: PercentHeightInherit,
+    name: "PositionFixed",
+    component: PositionFixed,
   },
   {
     path: "/login",
