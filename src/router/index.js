@@ -13,14 +13,15 @@ import Login from "@/views/login.vue";
 // import DiceFlexLayout from "@/views/dice_flexLayout"; // 骰子的布局
 // import UseingAxios from "@/views/useing_axios";
 // import PercentHeightInherit from "@/views/percent_height_is_inherit";
-import PositionFixed from "@/views/position_fixed";
+// import PositionFixed from "@/views/position_fixed";
+import MethodsComputedDifference from "@/views/methods_and_computed_difference";
 
 const routes = [
   //写demo的配置的路由
   {
     path: "/",
-    name: "PositionFixed",
-    component: PositionFixed,
+    name: "MethodsComputedDifference",
+    component: MethodsComputedDifference,
   },
   {
     path: "/login",
