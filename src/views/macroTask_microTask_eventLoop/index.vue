@@ -21,9 +21,12 @@
       这就说明:
       <strong>在当前的微任务没有执行完成时，是不会执行下一个宏任务的。</strong>
       <br />
-      <!-- <img src="" alt="" /> -->
       setTimeout就是作为宏任务来存在的，而Promise.then则是具有代表性的微任务，上述代码的执行顺序就是按照序号来输出的。
       <br />
+      <img :src="img01" :alt="alt01" />
+      <img :src="img02" :alt="alt02" />
+      <img :src="img03" :alt="alt03" />
+      <img :src="img04" :alt="alt04" />
     </p>
   </div>
 </template>
@@ -31,7 +34,16 @@
 export default {
   name: "MacroTaskMicroTaskEventloop",
   data() {
-    return {};
+    return {
+      img01: require("@/assets/img01.png"),
+      alt01: "宏任务与微任务",
+      img02: require("@/assets/img02.png"),
+      alt02: "同步代码与一步代码",
+      img03: require("@/assets/img03.png"),
+      alt03: "宏任务",
+      img04: require("@/assets/img04.png"),
+      alt04: "微任务",
+    };
   },
   methods: {
     /**
