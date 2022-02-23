@@ -27,8 +27,8 @@ ComponentContext.keys().forEach((componentFilePath) => {
         .replace(/\.\w+$/, "")
     )
   );
-  console.log("componentName-----", componentName);
-  console.log("componentFilePath-----", componentFilePath);
+  // console.log("componentName-----", componentName);
+  // console.log("componentFilePath-----", componentFilePath);
   // console.log(
   //   "componentConfig.default componentConfig ",
   //   componentConfig.default,
