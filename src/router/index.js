@@ -15,14 +15,16 @@ import Login from "@/views/login.vue";
 // import PercentHeightInherit from "@/views/percent_height_is_inherit";
 // import PositionFixed from "@/views/position_fixed";
 // import MethodsComputedDifference from "@/views/methods_and_computed_difference";
-import FlexGrowFlexShinkFlexBasis from "@/views/flex_grow&flex_shink&flex_basis";
+// import FlexGrowFlexShinkFlexBasis from "@/views/flex_grow&flex_shink&flex_basis";
+// import Question from "@/views/question";
+import MacroTaskMicroTaskEventloop from "@/views/macroTask_microTask_eventLoop";
 
 const routes = [
   //写demo的配置的路由
   {
     path: "/",
-    name: "FlexGrowFlexShinkFlexBasis",
-    component: FlexGrowFlexShinkFlexBasis,
+    name: "MacroTaskMicroTaskEventloop",
+    component: MacroTaskMicroTaskEventloop,
   },
   {
     path: "/login",
