@@ -15,7 +15,7 @@ const ComponentContext = require.context(
   /\.vue$/i,
   "lazy" // lazy代表是异步组件
 );
-console.log("ComponentContext.keys()------", ComponentContext.keys());
+// console.log("ComponentContext.keys()------", ComponentContext.keys());
 const app = createApp(App);
 ComponentContext.keys().forEach((componentFilePath) => {
   const componentName = upperFirst(

@@ -10,7 +10,7 @@ files.keys().forEach((key) => {
   };
 });
 
-console.log("modules => ", modules);
+// console.log("modules => ", modules);
 const PERSIST_PATHS = ["count.count"]; //例如 ["count.count","user.username"]
 export default createStore({
   modules,
