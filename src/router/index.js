@@ -18,14 +18,15 @@ import Login from "@/views/login.vue";
 // import FlexGrowFlexShinkFlexBasis from "@/views/flex_grow&flex_shink&flex_basis";
 // import Question from "@/views/question";
 // import MacroTaskMicroTaskEventloop from "@/views/macroTask_microTask_eventLoop";
-import PromiseCatchMethods from "@/views/promise_catch_methods";
+// import PromiseCatchMethods from "@/views/promise_catch_methods";
+import ArrayRemoveRepeat from "@/views/array_remove_repeat";
 
 const routes = [
   //写demo的配置的路由
   {
     path: "/",
-    name: "PromiseCatchMethods",
-    component: PromiseCatchMethods,
+    name: "ArrayRemoveRepeat",
+    component: ArrayRemoveRepeat,
   },
   {
     path: "/login",
