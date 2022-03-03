@@ -20,14 +20,15 @@ import Login from "@/views/login.vue";
 // import MacroTaskMicroTaskEventloop from "@/views/macroTask_microTask_eventLoop";
 // import PromiseCatchMethods from "@/views/promise_catch_methods";
 // import ArrayRemoveRepeat from "@/views/array_remove_repeat";
-import es6NewProperty from "@/views/es6_new_property";
+// import es6NewProperty from "@/views/es6_new_property";
+import PromiseResolveMethod from "@/views/promise_resolve_method";
 
 const routes = [
   //写demo的配置的路由
   {
     path: "/",
-    name: "es6NewProperty",
-    component: es6NewProperty,
+    name: "PromiseResolveMethod",
+    component: PromiseResolveMethod,
   },
   {
     path: "/login",
