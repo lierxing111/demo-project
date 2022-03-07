@@ -31,12 +31,96 @@ export default {
     return {};
   },
   methods: {
+    fragment7() {
+      // thenable 在 callback之后抛出异常
+      var thenable = {
+        then: function (resolve, reject) {
+          console.log(reject);
+          // console.log(object);
+          resolve("success");
+          throw new TypeError("typeError");
+        },
+      };
+      var p1 = Promise.resolve(thenable);
+      p1.then(
+        (v) => {
+          console.log(v);
+        },
+        (v) => {
+          // 此处不会执行
+          console.log(v);
+        }
+      );
+    },
+    fragment6() {
+      // thenable在callback之前抛出异常
+      var tnenable = {
+        then: function (resolve, reject) {
+          console.log("reject", reject);
+          throw new TypeError("throwing");
+          // resolve("success");
+        },
+      };
+      var p1 = Promise.resolve(tnenable);
+      // console.log("p1", p1);
+      p1.then(
+        (v) => {
+          // 此处不执行
+          console.log(v);
+        },
+        (v) => {
+          console.log(v);
+        }
+      );
+    },
+    fragment5() {
+      // resolve一个thenable对象
+      var p1 = Promise.resolve({
+        then: function (onFulfill, onReject) {
+          console.log("onReject", onReject);
+          onFulfill("fulfilled");
+        },
+      });
+      console.log(p1 instanceof Promise); // true
+      p1.then(
+        (v) => {
+          console.log(v);
+        },
+        (v) => {
+          // 此处不会执行
+          console.log(v);
+        }
+      );
+    },
+    fragment4() {
+      // resolve另外一个promise对象
+      var original = Promise.resolve(33);
+      //console.log(original instanceof Promise); // true
+      var current = Promise.resolve(original);
+      current.then((value) => {
+        console.log(value);
+      });
+      console.log("original === current ? " + (original === current));
+      /**
+       *打印顺序如下：这里有个同步异步先后执行的区别。日志顺序颠倒其实是由于异步地调用then 方法。https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then#return_value
+       * origin === current ? true
+       * 33
+       **/
+    },
+    fragment3() {
+      // resolve一个数组
+      const promise1 = Promise.resolve([1, 2, 3]);
+      // console.log(promise1 instanceof Promise); // true
+      promise1.then(function (value) {
+        console.log(value[0]); // 1
+      });
+    },
     fragment2() {
       //使用静态promise方法
       Promise.resolve("success").then(
         function (value) {
           //成功
-          console.log(value);
+          console.log(value); // success
         },
         function (value) {
           //将不会被执行
@@ -47,14 +131,30 @@ export default {
     fragment1() {
       const promise1 = Promise.resolve(123);
       promise1.then(function (value) {
-        console.log(value); // 返回的promise将以此值完成
-        console.log(typeof value);
+        console.log(value); // 123 返回的promise将以此值完成
+        console.log(typeof value); // "string"
       });
+    },
+    fragment0() {
+      //警告：不要在解析为自身的thenable 上调用Promise.resolve。这将导致无限递归，因为它试图展平无限嵌套的promise。
+      let thenable = {
+        then: (resolve, reject) => {
+          console.log("reject", reject);
+          // resolve(thenable); // 死循环
+        },
+      };
+      Promise.resolve(thenable);
     },
   },
   mounted() {
+    // this.fragment0();
     // this.fragment1();
-    this.fragment2();
+    // this.fragment2();
+    // this.fragment3();
+    // this.fragment4();
+    // this.fragment5();
+    // this.fragment6();
+    this.fragment7();
   },
 };
 </script>

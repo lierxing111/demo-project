@@ -21,14 +21,15 @@ import Login from "@/views/login.vue";
 // import PromiseCatchMethods from "@/views/promise_catch_methods";
 // import ArrayRemoveRepeat from "@/views/array_remove_repeat";
 // import es6NewProperty from "@/views/es6_new_property";
-import PromiseResolveMethod from "@/views/promise_resolve_method";
+// import PromiseResolveMethod from "@/views/promise_resolve_method";
+import PromisePrototypeThenMethod from "@/views/promise_prototype_then_method";
 
 const routes = [
   //写demo的配置的路由
   {
     path: "/",
-    name: "PromiseResolveMethod",
-    component: PromiseResolveMethod,
+    name: "PromisePrototypeThenMethod",
+    component: PromisePrototypeThenMethod,
   },
   {
     path: "/login",
