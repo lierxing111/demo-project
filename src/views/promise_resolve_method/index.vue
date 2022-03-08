@@ -1,7 +1,7 @@
 <template>
   <div class="promise-resolve-method">
     <!-- promise-resolve-method -->
-    <h5>Promise.resolve()</h5>
+    <h5><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve">Promise.resolve()</a></h5>
     <p>
       <strong>Promise.resolve(value)方法</strong>
       返回一个以给定值解析后的Promise 对象。如果这个值是一个 promise ，那么
