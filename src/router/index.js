@@ -24,14 +24,15 @@ import Login from "@/views/login.vue";
 // import PromiseResolveMethod from "@/views/promise_resolve_method";
 // import PromisePrototypeThenMethod from "@/views/promise_prototype_then_method";
 // import gitPullAllBranches from "@/views/git_pull_all_branches";
-import v_on from "@/views/v_on";
+// import v_on from "@/views/v_on";
+import $props_$attrs_$listeners from "@/views/$props_$attrs_$listeners";
 
 const routes = [
   //写demo的配置的路由
   {
     path: "/",
-    name: "v_on",
-    component: v_on,
+    name: "$props_$attrs_$listeners",
+    component: $props_$attrs_$listeners,
   },
   {
     path: "/login",
