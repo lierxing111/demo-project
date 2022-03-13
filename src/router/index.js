@@ -23,14 +23,15 @@ import Login from "@/views/login.vue";
 // import es6NewProperty from "@/views/es6_new_property";
 // import PromiseResolveMethod from "@/views/promise_resolve_method";
 // import PromisePrototypeThenMethod from "@/views/promise_prototype_then_method";
-import gitPullAllBranches from "@/views/git_pull_all_branches";
+// import gitPullAllBranches from "@/views/git_pull_all_branches";
+import v_on from "@/views/v_on";
 
 const routes = [
   //写demo的配置的路由
   {
     path: "/",
-    name: "gitPullAllBranches",
-    component: gitPullAllBranches,
+    name: "v_on",
+    component: v_on,
   },
   {
     path: "/login",
