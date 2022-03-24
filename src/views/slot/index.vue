@@ -1,5 +1,9 @@
 <template>
-  <div class="slot-wrapper">11</div>
+  <div class="slot-wrapper">
+    <!-- <div slot="header"></div> -->
+    <div></div>
+    <div></div>
+  </div>
 </template>
 <script>
 export default {

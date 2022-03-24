@@ -1,5 +1,9 @@
 <template>
-  <div class="slot-wrapper">11</div>
+  <div class="child-wrapper">
+    <slot name="header"></slot>
+    默认
+    <slot name="footer"></slot>
+  </div>
 </template>
 <script>
 export default {
